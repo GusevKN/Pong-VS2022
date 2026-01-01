@@ -106,12 +106,12 @@ int main()
 			
 		}
 		// Обработка столкновения мяча с верхней границей экрана
-		if (ball.getPosition().top < 0)
+		if (ball.getPosition().top <0)
 		{
 			ball.reboundBatOrTop();
 			// Добавление одного очка к счету игрока
-			score++;
 		}
+		
 		// Обработка столкновения мяча с боковыми границами экрана
 		if (ball.getPosition().left < 0 ||
 			ball.getPosition().left + ball.getPosition().width> window.getSize().x)
@@ -124,6 +124,7 @@ int main()
 			// Обнаружение столкновения, изменение направления движения мяча
 			// и добавление одного очка к счету
 			ball.reboundBatOrTop();
+			score++;
 		}
 		
 		/*
