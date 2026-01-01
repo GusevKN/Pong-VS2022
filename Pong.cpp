@@ -67,6 +67,14 @@ int main()
 		{
 			bat.stopRight();
 		}
+		if (bat.getPosition().left > 1170)
+		{
+			bat.stopRight();
+		}
+		if (bat.getPosition().left < 0)
+		{
+			bat.stopLeft();
+		}
 		/*
 		Обновление ракетки, мяча и HUD
 		**************************************
@@ -117,6 +125,7 @@ int main()
 			// и добавление одного очка к счету
 			ball.reboundBatOrTop();
 		}
+		
 		/*
 		Отрисовка ракетки, мяча и HUD
 		**************************************
