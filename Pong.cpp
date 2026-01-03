@@ -83,7 +83,7 @@ int main()
 		*/
 		// Обновление delta time
 		Time dt = clock.restart();
-		bat.update(dt);
+   		bat.update(dt);
 		ball.update(dt);
 		// Обновление текста HUD
 		std::stringstream ss;
@@ -102,11 +102,12 @@ int main()
 				score = 0;
 				// Сброс жизней
 				lives = 3;
+				ball.ballSpeedDefault();
 			}
 			
 		}
 		// Обработка столкновения мяча с верхней границей экрана
-		if (ball.getPosition().top <0)
+		if (ball.getPosition().top < 0)
 		{
 			ball.reboundBatOrTop();
 
@@ -125,8 +126,9 @@ int main()
 			// и добавление одного очка к счету
 			ball.reboundBatOrTop();
 			score++;
+			ball.ballspeed();
 		}
-		
+
 		/*
 		Отрисовка ракетки, мяча и HUD
 		**************************************

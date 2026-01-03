@@ -18,4 +18,6 @@ public:
 	void reboundBatOrTop();
 	void reboundBottom();
 	void update(Time dt);
+	void ballspeed();
+	void ballSpeedDefault();
 };

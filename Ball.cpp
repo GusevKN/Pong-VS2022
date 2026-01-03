@@ -39,3 +39,18 @@ void Ball::update(Time dt)
 	// ѕеремещаем м€ч
 	m_Shape.setPosition(m_Position);
 }
+void Ball::ballspeed()
+{
+	if (m_Speed < 3000) {
+		m_Speed += 200;
+	}
+	else
+	{
+
+		m_Speed = 2990;
+	}
+}
+void Ball::ballSpeedDefault() {
+	m_Speed = 600.0f; 
+}
+;
