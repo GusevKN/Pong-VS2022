@@ -12,7 +12,7 @@ int main()
 	int score = 0;
 	int lives = 3;
 	// Создаем ракетку в нижней центральной части экрана
-	Bat bat(1370 / 2, 760 - 20);
+	Bat bat(1370 / 2, window.getSize().y - 20);
 	// Создаем мяч
 	Ball ball(900 / 2, 0);
 	// Мы добавим мяч в следующей главе
@@ -67,7 +67,7 @@ int main()
 		{
 			bat.stopRight();
 		}
-		if (bat.getPosition().left > 1170)
+		if (bat.getPosition().left > (window.getSize().x-200))
 		{
 			bat.stopRight();
 		}
@@ -115,7 +115,7 @@ int main()
 		
 		// Обработка столкновения мяча с боковыми границами экрана
 		if (ball.getPosition().left < 0 ||
-			ball.getPosition().left + ball.getPosition().width> window.getSize().x)
+			ball.getPosition().left + ball.getPosition().width > window.getSize().x)
 		{
 			ball.reboundSides();
 		}
